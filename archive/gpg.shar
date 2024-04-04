@@ -5,15 +5,15 @@
 #
 # This archive contains:
 #
-#	/home/syobon/.gnupg/gpg-agent.conf
-#	/home/syobon/.gnupg/sshcontrol
+#	./.gnupg/gpg-agent.conf
+#	./.gnupg/sshcontrol
 #
-echo x - /home/syobon/.gnupg/gpg-agent.conf
-sed 's/^X//' >/home/syobon/.gnupg/gpg-agent.conf << 'fdc269371cec42e0502bf5ace818b598'
+echo x - ./.gnupg/gpg-agent.conf
+sed 's/^X//' >./.gnupg/gpg-agent.conf << '258f52532076cf9646a3793835f5473b'
 Xenable-ssh-support
-fdc269371cec42e0502bf5ace818b598
-echo x - /home/syobon/.gnupg/sshcontrol
-sed 's/^X//' >/home/syobon/.gnupg/sshcontrol << '89b17700090fef1769cf0fa64807de61'
+258f52532076cf9646a3793835f5473b
+echo x - ./.gnupg/sshcontrol
+sed 's/^X//' >./.gnupg/sshcontrol << '6a2c992f47748ad6867d649db950ccdf'
 X# List of allowed ssh keys.  Only keys present in this file are used
 X# in the SSH protocol.  The ssh-add tool may add new entries to this
 X# file to enable them; you may also add them manually.  Comment
@@ -26,6 +26,6 @@ X# caching TTL in seconds, and another optional field for arbitrary
 X# flags.   Prepend the keygrip with an '!' mark to disable it.
 X
 X9AC4552355DA7F05AEEDBC1D8B51D5EBF7E7F396
-89b17700090fef1769cf0fa64807de61
+6a2c992f47748ad6867d649db950ccdf
 exit
 

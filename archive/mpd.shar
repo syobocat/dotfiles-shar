@@ -5,11 +5,11 @@
 #
 # This archive contains:
 #
-#	/home/syobon/.config/mpd/mpd.conf
-#	/home/syobon/.config/ncmpcpp/config
+#	./.config/mpd/mpd.conf
+#	./.config/ncmpcpp/config
 #
-echo x - /home/syobon/.config/mpd/mpd.conf
-sed 's/^X//' >/home/syobon/.config/mpd/mpd.conf << '717a7fc026318a526f8640700954593d'
+echo x - ./.config/mpd/mpd.conf
+sed 's/^X//' >./.config/mpd/mpd.conf << '27c4e20cda3f7f0271121d5c70d111b9'
 Xmusic_directory		"/storage/Music"
 Xplaylist_directory		"/storage/Music/.mpd/playlists"
 Xdb_file			"/storage/Music/.mpd/database"
@@ -43,15 +43,15 @@ X
 X##replaygain			"auto"
 X##replaygain_limit		"yes"
 Xfilesystem_charset		"UTF-8"
-717a7fc026318a526f8640700954593d
-echo x - /home/syobon/.config/ncmpcpp/config
-sed 's/^X//' >/home/syobon/.config/ncmpcpp/config << 'f96634cce6b89db7157e4b25f2c98b1d'
+27c4e20cda3f7f0271121d5c70d111b9
+echo x - ./.config/ncmpcpp/config
+sed 's/^X//' >./.config/ncmpcpp/config << 'c2fee5f4d134ef318b1c73da0a65823c'
 Xvisualizer_fifo_path = "/home/syobon/.mpd/mpd.fifo"
 Xvisualizer_output_name = "ncmpcpp visualizer"
 Xvisualizer_sync_interval = "30" 
 Xvisualizer_in_stereo = "yes"
 Xvisualizer_type = "spectrum"
 Xvisualizer_spectrum_smooth_look = yes
-f96634cce6b89db7157e4b25f2c98b1d
+c2fee5f4d134ef318b1c73da0a65823c
 exit
 

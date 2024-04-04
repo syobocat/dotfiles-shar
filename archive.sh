@@ -1,10 +1,12 @@
 #!/bin/sh
 
 if [ "${XDG_CONFIG_HOME}" != "" ]; then
-	CONF="${XDG_CONFIG_HOME}"
+	CONF=$(echo "${XDG_CONFIG_HOME}" | sed s%^${HOME}%.%g)
 else
-	CONF="${HOME}/.config"
+	CONF=./.config
 fi
+
+cd "${HOME}"
 
 case "$1" in
 	"alacritty" )
@@ -19,21 +21,21 @@ case "$1" in
 			${CONF}/fish/functions/fish_prompt.fish"
 	;;
 	"gtk" )
-		TARGET="${HOME}/.gtkrc-2.0 \
+		TARGET="./.gtkrc-2.0 \
 			${CONF}/gtk-3.0/settings.ini"
 	;;
 	"gpg" )
-		TARGET="${HOME}/.gnupg/gpg-agent.conf \
-			${HOME}/.gnupg/sshcontrol"
+		TARGET="./.gnupg/gpg-agent.conf \
+			./.gnupg/sshcontrol"
 	;;
 	"gpg-freebsd" )
-		TARGET="${HOME}/.gnupg/scdaemon.conf"
+		TARGET="./.gnupg/scdaemon.conf"
 	;;
 	"helix" )
 		TARGET="${CONF}/helix/config.toml"
 	;;
 	"i3" )
-		TARGET="${HOME}/.xinitrc \
+		TARGET="./.xinitrc \
 			${CONF}/dunst/dunstrc \
 			${CONF}/fontconfig/fonts.conf \
 			${CONF}/i3/config \

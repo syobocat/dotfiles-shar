@@ -5,11 +5,11 @@
 #
 # This archive contains:
 #
-#	/home/syobon/.gnupg/scdaemon.conf
+#	./.gnupg/scdaemon.conf
 #
-echo x - /home/syobon/.gnupg/scdaemon.conf
-sed 's/^X//' >/home/syobon/.gnupg/scdaemon.conf << 'ae0dc8761365d20c35f927644ca506b4'
+echo x - ./.gnupg/scdaemon.conf
+sed 's/^X//' >./.gnupg/scdaemon.conf << '94a4af31dc75df8a3fd0df41f9b8a026'
 Xdisable-ccid
-ae0dc8761365d20c35f927644ca506b4
+94a4af31dc75df8a3fd0df41f9b8a026
 exit
 

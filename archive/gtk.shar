@@ -5,19 +5,19 @@
 #
 # This archive contains:
 #
-#	/home/syobon/.gtkrc-2.0
-#	/home/syobon/.config/gtk-3.0/settings.ini
+#	./.gtkrc-2.0
+#	./.config/gtk-3.0/settings.ini
 #
-echo x - /home/syobon/.gtkrc-2.0
-sed 's/^X//' >/home/syobon/.gtkrc-2.0 << '38339453ca9b31caacdf337e71341438'
+echo x - ./.gtkrc-2.0
+sed 's/^X//' >./.gtkrc-2.0 << '231a45e76aee38172c484a0e2dcd587d'
 Xgtk-theme-name="Qogir"
 Xgtk-icon-theme-name="Qogir"
-38339453ca9b31caacdf337e71341438
-echo x - /home/syobon/.config/gtk-3.0/settings.ini
-sed 's/^X//' >/home/syobon/.config/gtk-3.0/settings.ini << 'ec87100b5681292b3e6ccbe4bae475e2'
+231a45e76aee38172c484a0e2dcd587d
+echo x - ./.config/gtk-3.0/settings.ini
+sed 's/^X//' >./.config/gtk-3.0/settings.ini << '19e0a09fccbc0aa285da6a5a83126f64'
 X[Settings]
 Xgtk-theme-name=Qogir
 Xgtk-icon-theme-name=Qogir
-ec87100b5681292b3e6ccbe4bae475e2
+19e0a09fccbc0aa285da6a5a83126f64
 exit
 

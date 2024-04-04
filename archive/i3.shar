@@ -5,17 +5,17 @@
 #
 # This archive contains:
 #
-#	/home/syobon/.xinitrc
-#	/home/syobon/.config/dunst/dunstrc
-#	/home/syobon/.config/fontconfig/fonts.conf
-#	/home/syobon/.config/i3/config
-#	/home/syobon/.config/i3/conky-i3.sh
-#	/home/syobon/.config/i3/conky-i3.conf
-#	/home/syobon/.config/picom/picom.conf
-#	/home/syobon/.config/rofi/config.rasi
+#	./.xinitrc
+#	./.config/dunst/dunstrc
+#	./.config/fontconfig/fonts.conf
+#	./.config/i3/config
+#	./.config/i3/conky-i3.sh
+#	./.config/i3/conky-i3.conf
+#	./.config/picom/picom.conf
+#	./.config/rofi/config.rasi
 #
-echo x - /home/syobon/.xinitrc
-sed 's/^X//' >/home/syobon/.xinitrc << '7452d4f1f98c6fe8c70915f5ea82f24f'
+echo x - ./.xinitrc
+sed 's/^X//' >./.xinitrc << 'db7aa7a1c4a4fffb49c3041fd02f7e0f'
 XLANG="ja_JP.UTF-8"
 Xexport XMODIFIERS='@im=fcitx'
 Xexport GTK_IM_MODULE=fcitx
@@ -25,9 +25,9 @@ Xmpd
 Xpicom -b
 XLANG=C.UTF-8 conky
 Xexec i3
-7452d4f1f98c6fe8c70915f5ea82f24f
-echo x - /home/syobon/.config/dunst/dunstrc
-sed 's/^X//' >/home/syobon/.config/dunst/dunstrc << '652a1804a2c767b29468ba193da764cd'
+db7aa7a1c4a4fffb49c3041fd02f7e0f
+echo x - ./.config/dunst/dunstrc
+sed 's/^X//' >./.config/dunst/dunstrc << '60bf48b343dce9bb08dc863b060f8b44'
 X[global]
 Xwidth = 350
 Xframe_color = "#181c24"
@@ -38,9 +38,9 @@ X
 X[urgency_normal]
 Xbackground = "#f9f9fb"
 Xforeground = "#181c24"
-652a1804a2c767b29468ba193da764cd
-echo x - /home/syobon/.config/fontconfig/fonts.conf
-sed 's/^X//' >/home/syobon/.config/fontconfig/fonts.conf << 'bf64cafebcc54601753ba4ce2175d32f'
+60bf48b343dce9bb08dc863b060f8b44
+echo x - ./.config/fontconfig/fonts.conf
+sed 's/^X//' >./.config/fontconfig/fonts.conf << 'f5416ed742899cb6d11ac2ebc9aab6b0'
 X<?xml version="1.0"?>
 X<!DOCTYPE fontconfig SYSTEM "fonts.dtd">
 X<fontconfig>
@@ -67,9 +67,9 @@ X      <family>Noto Sans Mono CJK JP</family>
 X    </prefer>
 X  </alias>
 X</fontconfig>
-bf64cafebcc54601753ba4ce2175d32f
-echo x - /home/syobon/.config/i3/config
-sed 's/^X//' >/home/syobon/.config/i3/config << 'd849f48b29aa42cc93871e23de884f11'
+f5416ed742899cb6d11ac2ebc9aab6b0
+echo x - ./.config/i3/config
+sed 's/^X//' >./.config/i3/config << '767adf812e9a5eff41039f4a7afc9981'
 X# i3 config file (v4)
 X
 X# Keys
@@ -185,18 +185,18 @@ X	bindsym $down resize grow height 10 px or 10 ppt
 X	bindsym $right resize grow width 10 px or 10 ppt
 X}
 Xbindsym $mod+p mode "resize"
-d849f48b29aa42cc93871e23de884f11
-echo x - /home/syobon/.config/i3/conky-i3.sh
-sed 's/^X//' >/home/syobon/.config/i3/conky-i3.sh << '1afbe9c65cd0fbb774aa85e5a15dc7f6'
+767adf812e9a5eff41039f4a7afc9981
+echo x - ./.config/i3/conky-i3.sh
+sed 's/^X//' >./.config/i3/conky-i3.sh << 'f817658562528f47903e5391197c0692'
 X#!/bin/sh
 XLANG=C
 Xecho '{"version":1}'
 Xecho '['
 Xecho '[],'
 Xexec conky -c ${HOME}/.config/i3/conky-i3.conf
-1afbe9c65cd0fbb774aa85e5a15dc7f6
-echo x - /home/syobon/.config/i3/conky-i3.conf
-sed 's/^X//' >/home/syobon/.config/i3/conky-i3.conf << '6c30749d7c85df90efa5c972ca345661'
+f817658562528f47903e5391197c0692
+echo x - ./.config/i3/conky-i3.conf
+sed 's/^X//' >./.config/i3/conky-i3.conf << '4ae13784e2b37ce040b6ff7062d10434'
 Xconky.config = {
 X	out_to_x = false,
 X	own_window = false,
@@ -222,9 +222,9 @@ X	{ "full_text": "  ${time %Y/%m/%d (%a)}", "color": "\#c678dd" },
 X	{ "full_text": "${time %H:%M %S} ", "color": "\#c678dd" }
 X],
 X]];
-6c30749d7c85df90efa5c972ca345661
-echo x - /home/syobon/.config/picom/picom.conf
-sed 's/^X//' >/home/syobon/.config/picom/picom.conf << '3253daa30c1307074a3311e05df450e0'
+4ae13784e2b37ce040b6ff7062d10434
+echo x - ./.config/picom/picom.conf
+sed 's/^X//' >./.config/picom/picom.conf << 'cdf3329ee67987d3dca0f681a51bd1a9'
 Xbackend = "glx";
 Xglx-no-stencil = true;
 Xglx-no-rebind-pixmap = true;
@@ -247,15 +247,15 @@ X	"role = 'Popup'",
 X	"window_type = 'popup_menu'",
 X	"window_type = 'tooltip'"
 X];
-3253daa30c1307074a3311e05df450e0
-echo x - /home/syobon/.config/rofi/config.rasi
-sed 's/^X//' >/home/syobon/.config/rofi/config.rasi << '725c2e93e90865726d63203aa8602065'
+cdf3329ee67987d3dca0f681a51bd1a9
+echo x - ./.config/rofi/config.rasi
+sed 's/^X//' >./.config/rofi/config.rasi << '3fcba57870f4218eeb2ab90c8493acbc'
 X@theme "/usr/local/share/rofi/themes/Arc-Dark.rasi"
 Xconfiguration {
 X	show-icons: true;
 X	modes: [drun,run];
 X	font: "CaskaydiaCove Nerd Font 12";
 X}
-725c2e93e90865726d63203aa8602065
+3fcba57870f4218eeb2ab90c8493acbc
 exit
 

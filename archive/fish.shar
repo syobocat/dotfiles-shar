@@ -5,11 +5,11 @@
 #
 # This archive contains:
 #
-#	/home/syobon/.config/fish/config.fish
-#	/home/syobon/.config/fish/functions/fish_prompt.fish
+#	./.config/fish/config.fish
+#	./.config/fish/functions/fish_prompt.fish
 #
-echo x - /home/syobon/.config/fish/config.fish
-sed 's/^X//' >/home/syobon/.config/fish/config.fish << 'bad074ad6348d1d914a641273a786754'
+echo x - ./.config/fish/config.fish
+sed 's/^X//' >./.config/fish/config.fish << '8118de1bc0d7410686b917aada1cde85'
 Xif status is-interactive
 X    # Commands to run in interactive sessions can go here
 X    set -g fish_greeting
@@ -24,9 +24,9 @@ X        rclone mount --daemon --vfs-cache-mode full pCloud: /home/syobon/pCloud
 X        exec startx
 X    end
 Xend
-bad074ad6348d1d914a641273a786754
-echo x - /home/syobon/.config/fish/functions/fish_prompt.fish
-sed 's/^X//' >/home/syobon/.config/fish/functions/fish_prompt.fish << 'af8db45ac809d9ba3729c3f41a03396f'
+8118de1bc0d7410686b917aada1cde85
+echo x - ./.config/fish/functions/fish_prompt.fish
+sed 's/^X//' >./.config/fish/functions/fish_prompt.fish << '2f08e60927392e2383b57e8db8baa3fb'
 Xfunction fish_prompt
 X	printf "[%s@%s %s%s%s]%% " $USER $hostname $(set_color green) $(prompt_pwd) $(set_color normal)
 Xend
@@ -34,6 +34,6 @@ X
 Xfunction fish_right_prompt
 X	printf "%s[%s]%s " $(set_color red) $status $(set_color normal)
 Xend
-af8db45ac809d9ba3729c3f41a03396f
+2f08e60927392e2383b57e8db8baa3fb
 exit
 

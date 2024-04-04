@@ -5,10 +5,10 @@
 #
 # This archive contains:
 #
-#	/home/syobon/.config/yazi/yazi.toml
+#	./.config/yazi/yazi.toml
 #
-echo x - /home/syobon/.config/yazi/yazi.toml
-sed 's/^X//' >/home/syobon/.config/yazi/yazi.toml << 'e3459c58370a5e1cf1167ce1826f9f3f'
+echo x - ./.config/yazi/yazi.toml
+sed 's/^X//' >./.config/yazi/yazi.toml << '140ec4252260edfa9c363085baf04f1f'
 X[manager]
 Xratio = [3, 5, 7]
 Xsort_by = "natural"
@@ -48,6 +48,6 @@ X  { mime = 'video/*', use = "multimedia" },
 X  { mime = 'audio/*', use = "multimedia" },
 X  { mime = '*', use = 'xdg' },
 X]
-e3459c58370a5e1cf1167ce1826f9f3f
+140ec4252260edfa9c363085baf04f1f
 exit
 

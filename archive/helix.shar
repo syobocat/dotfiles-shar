@@ -5,10 +5,10 @@
 #
 # This archive contains:
 #
-#	/home/syobon/.config/helix/config.toml
+#	./.config/helix/config.toml
 #
-echo x - /home/syobon/.config/helix/config.toml
-sed 's/^X//' >/home/syobon/.config/helix/config.toml << 'cbab7df7fc0cf8fb30afe6d1eb69b0e0'
+echo x - ./.config/helix/config.toml
+sed 's/^X//' >./.config/helix/config.toml << '537114c1fefa3eba26f5e7924dd9e6bb'
 Xtheme = "onedark"
 X
 X[editor]
@@ -29,6 +29,6 @@ Xright = [ "file-type", "file-encoding", "file-line-ending", "separator", "posit
 X
 X[editor.lsp]
 Xdisplay-messages = true
-cbab7df7fc0cf8fb30afe6d1eb69b0e0
+537114c1fefa3eba26f5e7924dd9e6bb
 exit
 

@@ -5,10 +5,10 @@
 #
 # This archive contains:
 #
-#	/home/syobon/.config/alacritty/alacritty.toml
+#	./.config/alacritty/alacritty.toml
 #
-echo x - /home/syobon/.config/alacritty/alacritty.toml
-sed 's/^X//' >/home/syobon/.config/alacritty/alacritty.toml << 'd449d3c9b9094ccdf97f7e7f8332fe26'
+echo x - ./.config/alacritty/alacritty.toml
+sed 's/^X//' >./.config/alacritty/alacritty.toml << '1f869de304f5d7115769137564c562bf'
 X[window]
 Xopacity = 0.90
 Xresize_increments = true
@@ -46,6 +46,6 @@ Xblue    = '#61afef'
 Xmagenta = '#c678dd'
 Xcyan    = '#56b6c2'
 Xwhite   = '#ffffff'
-d449d3c9b9094ccdf97f7e7f8332fe26
+1f869de304f5d7115769137564c562bf
 exit
 

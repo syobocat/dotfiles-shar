@@ -5,11 +5,11 @@
 #
 # This archive contains:
 #
-#	/home/syobon/.config/conky/conky.conf
-#	/home/syobon/.config/conky/dateutil.py
+#	./.config/conky/conky.conf
+#	./.config/conky/dateutil.py
 #
-echo x - /home/syobon/.config/conky/conky.conf
-sed 's/^X//' >/home/syobon/.config/conky/conky.conf << '56fc7b1c2a03d90f0715230aaaf83aa6'
+echo x - ./.config/conky/conky.conf
+sed 's/^X//' >./.config/conky/conky.conf << '4d7bdb5305879c92b2c0e0c6295bcdf0'
 Xconky.config = {
 X    alignment = 'top_right',
 X    background = true,
@@ -89,9 +89,9 @@ X${if_mpd_playing}
 X${mpd_elapsed} ${mpd_bar 5,300} ${mpd_length}
 X${alignc}${scroll wait 35 1 10 ${font2}${mpd_smart}${font}}${endif}${endif}${endif}
 X]]
-56fc7b1c2a03d90f0715230aaaf83aa6
-echo x - /home/syobon/.config/conky/dateutil.py
-sed 's/^X//' >/home/syobon/.config/conky/dateutil.py << '291a891a25e84c3c829ece58ab079516'
+4d7bdb5305879c92b2c0e0c6295bcdf0
+echo x - ./.config/conky/dateutil.py
+sed 's/^X//' >./.config/conky/dateutil.py << 'f688adc604c12781aaef61027df2a4ee'
 X#!/usr/bin/env python
 Ximport sys
 Xfrom datetime import datetime
@@ -110,6 +110,6 @@ X
 Xlength = (end - start).total_seconds()
 Xpos = (now - start).total_seconds()
 Xprint(round(pos / length * 100))
-291a891a25e84c3c829ece58ab079516
+f688adc604c12781aaef61027df2a4ee
 exit
 
