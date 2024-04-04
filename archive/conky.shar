@@ -1,0 +1,115 @@
+# This is a shell archive.  Save it in a file, remove anything before
+# this line, and then unpack it by entering "sh file".  Note, it may
+# create directories; files and directories will be owned by you and
+# have default permissions.
+#
+# This archive contains:
+#
+#	/home/syobon/.config/conky/conky.conf
+#	/home/syobon/.config/conky/dateutil.py
+#
+echo x - /home/syobon/.config/conky/conky.conf
+sed 's/^X//' >/home/syobon/.config/conky/conky.conf << '56fc7b1c2a03d90f0715230aaaf83aa6'
+Xconky.config = {
+X    alignment = 'top_right',
+X    background = true,
+X    cpu_avg_samples = 2,
+X    default_color = 'white',
+X    default_outline_color = 'grey',
+X    default_shade_color = 'white',
+X    double_buffer = true,
+X    draw_borders = false,
+X    draw_graph_borders = true,
+X    draw_outline = false,
+X    draw_shades = false,
+X    extra_newline = false,
+X    font = 'Cascadia Code:size=12',
+X    font1 = 'Cascadia Code:Bold:size=36',
+X    font2 = 'Noto Sans Mono CJK JP:size=12',
+X    color1 = 'white',
+X    gap_x = 60,
+X    gap_y = 60,
+X    minimum_height = 5,
+X    minimum_width = 400,
+X    net_avg_samples = 2,
+X    no_buffers = true,
+X    out_to_console = false,
+X    out_to_stderr = false,
+X    out_to_x = true,
+X    own_window = true,
+X    own_window_class = 'Conky',
+X    own_window_type = 'override',
+X    own_window_argb_visual = true,
+X    own_window_argb_value = 0,
+X    pad_percents = 3,
+X    show_graph_range = false,
+X    show_graph_scale = true,
+X    stippled_borders = 0,
+X    update_interval = 0.2,
+X    uppercase = false,
+X    use_spacer = 'left',
+X    use_xft = true,
+X}
+X
+Xconky.text = [[
+X${alignr}${font1}${time %H:%M %S}${font}
+X${offset 160}${time %Y/%m/%d}${alignr}${time %A}
+X
+X${time %Y}:${alignc}${execibar 60 5,300 ${HOME}/.config/conky/dateutil.py year_prog}${alignr}${execi 60 ${HOME}/.config/conky/dateutil.py year_prog}%
+X ${time %m} :${alignc}${execibar 60 5,300 ${HOME}/.config/conky/dateutil.py month_prog}${alignr}${execi 60 ${HOME}/.config/conky/dateutil.py month_prog}%
+X ${time %d} :${alignc}${execibar 60 5,300 ${HOME}/.config/conky/dateutil.py day_prog}${alignr}${execi 60 ${HOME}/.config/conky/dateutil.py day_prog}%
+X
+XSystem Information${hr}
+X
+X  OS  :${alignr}${if_match "${sysname}" == "Linux"}${distribution}${endif}${sysname}
+XKernel:${alignr}${kernel}
+XUptime:${alignr}${uptime}
+X
+XHardware Utilization${hr}
+X
+XCPU : ${alignc}${loadavg}${alignr}${cpu}%
+X${cpugraph cpu0 70,400 ffffff ff0000 1 -t}${if_match "${sysname}" == "Linux"}
+XGPU : ${alignr}${nvidia gpuutil}%
+X${nvidiagraph gpuutil 70,400 ffffff ff0000 -t}${endif}
+XRAM : ${alignc}${mem}/${memmax}${alignr}${memperc}%
+X${memgraph 70,400 ffffff ff0000 1 -t}
+XSwap: ${alignc}${swap}/${swapmax}${alignr}${swapperc}%
+X${lua_graph swapperc 70,400 ffffff ff0000 1 -t}
+X${if_match "${sysname}" == "Linux"}${if_existing /usr/bin/musicpd}
+XMusic Player Daemon${hr}
+X
+X${alignc}${mpd_status}
+X${if_mpd_playing}
+X${mpd_elapsed} ${mpd_bar 5,300} ${mpd_length}
+X${alignc}${scroll wait 35 1 10 ${font2}${mpd_smart}${font}}${endif}${endif}${endif}${if_match "${sysname}" == "FreeBSD"}${if_existing /usr/local/bin/musicpd}
+XMusic Player Daemon${hr}
+X
+X${alignc}${mpd_status}
+X${if_mpd_playing}
+X${mpd_elapsed} ${mpd_bar 5,300} ${mpd_length}
+X${alignc}${scroll wait 35 1 10 ${font2}${mpd_smart}${font}}${endif}${endif}${endif}
+X]]
+56fc7b1c2a03d90f0715230aaaf83aa6
+echo x - /home/syobon/.config/conky/dateutil.py
+sed 's/^X//' >/home/syobon/.config/conky/dateutil.py << '291a891a25e84c3c829ece58ab079516'
+X#!/usr/bin/env python
+Ximport sys
+Xfrom datetime import datetime
+Xcommand = sys.argv[1]
+Xnow = datetime.now()
+Xif command == "year_prog":
+X    start = datetime(now.year, 1, 1)
+X    end = datetime(now.year+1, 1, 1)
+Xelif command == "month_prog":
+X    start = datetime(now.year, now.month, 1)
+X    end = datetime(now.year, now.month+1, 1)
+Xelif command == "day_prog":
+X    start = datetime(now.year, now.month, now.day)
+X    end = datetime(now.year, now.month, now.day+1)
+X    
+Xlength = (end - start).total_seconds()
+Xpos = (now - start).total_seconds()
+Xprint(round(pos / length * 100))
+291a891a25e84c3c829ece58ab079516
+exit
+

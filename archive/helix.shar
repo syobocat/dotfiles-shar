@@ -1,0 +1,34 @@
+# This is a shell archive.  Save it in a file, remove anything before
+# this line, and then unpack it by entering "sh file".  Note, it may
+# create directories; files and directories will be owned by you and
+# have default permissions.
+#
+# This archive contains:
+#
+#	/home/syobon/.config/helix/config.toml
+#
+echo x - /home/syobon/.config/helix/config.toml
+sed 's/^X//' >/home/syobon/.config/helix/config.toml << 'cbab7df7fc0cf8fb30afe6d1eb69b0e0'
+Xtheme = "onedark"
+X
+X[editor]
+Xcursorline = true
+Xcolor-modes = true
+Xindent-guides.render = true
+X
+X[editor.cursor-shape]
+Xnormal = "block"
+Xinsert = "bar"
+Xselect = "bar"
+X
+X[editor.statusline]
+Xmode.normal = "NORMAL"
+Xmode.insert = "INSERT"
+Xmode.select = "SELECT"
+Xright = [ "file-type", "file-encoding", "file-line-ending", "separator", "position-percentage", "position" ]
+X
+X[editor.lsp]
+Xdisplay-messages = true
+cbab7df7fc0cf8fb30afe6d1eb69b0e0
+exit
+

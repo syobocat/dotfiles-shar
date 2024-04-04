@@ -1,0 +1,53 @@
+# This is a shell archive.  Save it in a file, remove anything before
+# this line, and then unpack it by entering "sh file".  Note, it may
+# create directories; files and directories will be owned by you and
+# have default permissions.
+#
+# This archive contains:
+#
+#	/home/syobon/.config/yazi/yazi.toml
+#
+echo x - /home/syobon/.config/yazi/yazi.toml
+sed 's/^X//' >/home/syobon/.config/yazi/yazi.toml << 'e3459c58370a5e1cf1167ce1826f9f3f'
+X[manager]
+Xratio = [3, 5, 7]
+Xsort_by = "natural"
+Xsort_dir_first = true
+Xlinemode = "size"
+X
+X[opener]
+Xtext = [
+X  { run = '$VISUAL "$@"', block = true },
+X]
+Xdocument = [
+X  { run = 'firefox "$@"' },
+X]
+Ximage = [
+X  { run = 'feh -FZYdS filename --version-sort --start-at "$@"' },
+X]
+Xmultimedia = [
+X  { run = 'ffplay -v 0 -seek_interval 2 -autoexit -i "$@"' },
+X]
+Xwindows = [
+X  { run = 'wine "$@"' },
+X]
+Xxdg = [
+X  { run = 'xdg-open "$@"' },
+X]
+X
+X[open]
+Xrules = [
+X  { name = '*.html', use = "document" },
+X  { name = '*.pdf', use = "document" },
+X  { name = '*.svg', use = "document" },
+X  { name = '*.exe', use = "windows" },
+X  { name = '*.lnk', use = "windows" },
+X  { mime = 'text/*', use = "text" },
+X  { mime = 'image/*', use = "image" },
+X  { mime = 'video/*', use = "multimedia" },
+X  { mime = 'audio/*', use = "multimedia" },
+X  { mime = '*', use = 'xdg' },
+X]
+e3459c58370a5e1cf1167ce1826f9f3f
+exit
+

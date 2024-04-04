@@ -1,0 +1,57 @@
+# This is a shell archive.  Save it in a file, remove anything before
+# this line, and then unpack it by entering "sh file".  Note, it may
+# create directories; files and directories will be owned by you and
+# have default permissions.
+#
+# This archive contains:
+#
+#	/home/syobon/.config/mpd/mpd.conf
+#	/home/syobon/.config/ncmpcpp/config
+#
+echo x - /home/syobon/.config/mpd/mpd.conf
+sed 's/^X//' >/home/syobon/.config/mpd/mpd.conf << '717a7fc026318a526f8640700954593d'
+Xmusic_directory		"/storage/Music"
+Xplaylist_directory		"/storage/Music/.mpd/playlists"
+Xdb_file			"/storage/Music/.mpd/database"
+Xlog_file			"~/.mpd/log"
+Xpid_file			"~/.mpd/pid"
+Xstate_file			"~/.mpd/state"
+Xsticker_file			"~/.mpd/sticker.sql"
+X
+Xrestore_paused "yes"
+Xsave_absolute_paths_in_playlists	"yes"
+Xauto_update	"yes"
+Xfollow_outside_symlinks	"yes"
+Xfollow_inside_symlinks		"yes"
+X
+Xaudio_output {
+X	type		"oss"
+X	name		"Default OSS Device"
+X##	device		"/dev/dsp"	# optional
+X##	mixer_type      "hardware"	# optional
+X##	mixer_device	"/dev/mixer"	# optional
+X##	mixer_control	"PCM"		# optional
+X}
+X
+Xaudio_output {
+X	type		"fifo"
+X	name		"ncmpcpp visualizer"
+X	path		"~/.mpd/mpd.fifo"
+X	format		"44100:16:2"
+X}
+X
+X##replaygain			"auto"
+X##replaygain_limit		"yes"
+Xfilesystem_charset		"UTF-8"
+717a7fc026318a526f8640700954593d
+echo x - /home/syobon/.config/ncmpcpp/config
+sed 's/^X//' >/home/syobon/.config/ncmpcpp/config << 'f96634cce6b89db7157e4b25f2c98b1d'
+Xvisualizer_fifo_path = "/home/syobon/.mpd/mpd.fifo"
+Xvisualizer_output_name = "ncmpcpp visualizer"
+Xvisualizer_sync_interval = "30" 
+Xvisualizer_in_stereo = "yes"
+Xvisualizer_type = "spectrum"
+Xvisualizer_spectrum_smooth_look = yes
+f96634cce6b89db7157e4b25f2c98b1d
+exit
+

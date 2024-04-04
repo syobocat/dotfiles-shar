@@ -1,0 +1,39 @@
+# This is a shell archive.  Save it in a file, remove anything before
+# this line, and then unpack it by entering "sh file".  Note, it may
+# create directories; files and directories will be owned by you and
+# have default permissions.
+#
+# This archive contains:
+#
+#	/home/syobon/.config/fish/config.fish
+#	/home/syobon/.config/fish/functions/fish_prompt.fish
+#
+echo x - /home/syobon/.config/fish/config.fish
+sed 's/^X//' >/home/syobon/.config/fish/config.fish << 'bad074ad6348d1d914a641273a786754'
+Xif status is-interactive
+X    # Commands to run in interactive sessions can go here
+X    set -g fish_greeting
+Xend
+X
+Xif status is-login
+X    set -x VISUAL hx
+X    set -x SSH_AUTH_SOCK $(gpgconf --list-dirs agent-ssh-socket)
+X
+X    if [ "$(tty)" = "/dev/ttyv0" ]
+X        rclone mount --daemon --vfs-cache-mode full pCloud: /home/syobon/pCloud
+X        exec startx
+X    end
+Xend
+bad074ad6348d1d914a641273a786754
+echo x - /home/syobon/.config/fish/functions/fish_prompt.fish
+sed 's/^X//' >/home/syobon/.config/fish/functions/fish_prompt.fish << 'af8db45ac809d9ba3729c3f41a03396f'
+Xfunction fish_prompt
+X	printf "[%s@%s %s%s%s]%% " $USER $hostname $(set_color green) $(prompt_pwd) $(set_color normal)
+Xend
+X
+Xfunction fish_right_prompt
+X	printf "%s[%s]%s " $(set_color red) $status $(set_color normal)
+Xend
+af8db45ac809d9ba3729c3f41a03396f
+exit
+

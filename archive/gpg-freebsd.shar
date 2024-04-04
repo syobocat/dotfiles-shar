@@ -1,0 +1,15 @@
+# This is a shell archive.  Save it in a file, remove anything before
+# this line, and then unpack it by entering "sh file".  Note, it may
+# create directories; files and directories will be owned by you and
+# have default permissions.
+#
+# This archive contains:
+#
+#	/home/syobon/.gnupg/scdaemon.conf
+#
+echo x - /home/syobon/.gnupg/scdaemon.conf
+sed 's/^X//' >/home/syobon/.gnupg/scdaemon.conf << 'ae0dc8761365d20c35f927644ca506b4'
+Xdisable-ccid
+ae0dc8761365d20c35f927644ca506b4
+exit
+

@@ -1,0 +1,51 @@
+# This is a shell archive.  Save it in a file, remove anything before
+# this line, and then unpack it by entering "sh file".  Note, it may
+# create directories; files and directories will be owned by you and
+# have default permissions.
+#
+# This archive contains:
+#
+#	/home/syobon/.config/alacritty/alacritty.toml
+#
+echo x - /home/syobon/.config/alacritty/alacritty.toml
+sed 's/^X//' >/home/syobon/.config/alacritty/alacritty.toml << 'd449d3c9b9094ccdf97f7e7f8332fe26'
+X[window]
+Xopacity = 0.90
+Xresize_increments = true
+X
+X[font]
+Xnormal = { family = "CaskaydiaCove Nerd Font", style = "Regular" }
+Xsize = 11
+X
+X[cursor]
+Xstyle = { shape = "Beam", blinking = "On" }
+X
+X[mouse]
+Xhide_when_typing = true
+X
+X[colors.primary]
+Xbackground = '#282c34'
+Xforeground = '#abb2bf'
+X
+X[colors.normal]
+Xblack   = '#1e2127'
+Xred     = '#e06c75'
+Xgreen   = '#98c379'
+Xyellow  = '#d19a66'
+Xblue    = '#61afef'
+Xmagenta = '#c678dd'
+Xcyan    = '#56b6c2'
+Xwhite   = '#abb2bf'
+X
+X[colors.bright]
+Xblack   = '#5c6370'
+Xred     = '#e06c75'
+Xgreen   = '#98c379'
+Xyellow  = '#d19a66'
+Xblue    = '#61afef'
+Xmagenta = '#c678dd'
+Xcyan    = '#56b6c2'
+Xwhite   = '#ffffff'
+d449d3c9b9094ccdf97f7e7f8332fe26
+exit
+

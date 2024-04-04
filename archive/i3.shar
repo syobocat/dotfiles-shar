@@ -1,0 +1,261 @@
+# This is a shell archive.  Save it in a file, remove anything before
+# this line, and then unpack it by entering "sh file".  Note, it may
+# create directories; files and directories will be owned by you and
+# have default permissions.
+#
+# This archive contains:
+#
+#	/home/syobon/.xinitrc
+#	/home/syobon/.config/dunst/dunstrc
+#	/home/syobon/.config/fontconfig/fonts.conf
+#	/home/syobon/.config/i3/config
+#	/home/syobon/.config/i3/conky-i3.sh
+#	/home/syobon/.config/i3/conky-i3.conf
+#	/home/syobon/.config/picom/picom.conf
+#	/home/syobon/.config/rofi/config.rasi
+#
+echo x - /home/syobon/.xinitrc
+sed 's/^X//' >/home/syobon/.xinitrc << '7452d4f1f98c6fe8c70915f5ea82f24f'
+XLANG="ja_JP.UTF-8"
+Xexport XMODIFIERS='@im=fcitx'
+Xexport GTK_IM_MODULE=fcitx
+Xexport QT_IM_MODULE=fcitx
+Xgpg-agent --pinentry-program /usr/local/bin/pinentry-gtk-2 --daemon
+Xmpd
+Xpicom -b
+XLANG=C.UTF-8 conky
+Xexec i3
+7452d4f1f98c6fe8c70915f5ea82f24f
+echo x - /home/syobon/.config/dunst/dunstrc
+sed 's/^X//' >/home/syobon/.config/dunst/dunstrc << '652a1804a2c767b29468ba193da764cd'
+X[global]
+Xwidth = 350
+Xframe_color = "#181c24"
+Xtransparency = 10
+Xfont = Noto Sans Mono CJK JP 9
+Xmax_icon_size = 48
+X
+X[urgency_normal]
+Xbackground = "#f9f9fb"
+Xforeground = "#181c24"
+652a1804a2c767b29468ba193da764cd
+echo x - /home/syobon/.config/fontconfig/fonts.conf
+sed 's/^X//' >/home/syobon/.config/fontconfig/fonts.conf << 'bf64cafebcc54601753ba4ce2175d32f'
+X<?xml version="1.0"?>
+X<!DOCTYPE fontconfig SYSTEM "fonts.dtd">
+X<fontconfig>
+X  <alias>
+X    <family>selif</family>
+X    <prefer>
+X      <family>Noto Serif</family>
+X      <family>Noto Serif CJK JP</family>
+X    </prefer>
+X  </alias>
+X  <alias>
+X    <family>sans-serif</family>
+X    <prefer>
+X      <family>Noto Sans</family>
+X      <family>Noto Sans CJK JP</family>
+X    </prefer>
+X  </alias>
+X  <alias>
+X    <family>monospace</family>
+X    <prefer>
+X      <family>CaskaydiaCove Nerd Font</family>
+X      <family>Noto Sans Mono</family>
+X      <family>Noto Sans Mono CJK JP</family>
+X    </prefer>
+X  </alias>
+X</fontconfig>
+bf64cafebcc54601753ba4ce2175d32f
+echo x - /home/syobon/.config/i3/config
+sed 's/^X//' >/home/syobon/.config/i3/config << 'd849f48b29aa42cc93871e23de884f11'
+X# i3 config file (v4)
+X
+X# Keys
+Xset $up w
+Xset $left u
+Xset $down o
+Xset $right i
+Xset $mod Mod4
+X
+X# Programs
+Xset $menu "LANG=C rofi -show drun"
+X
+X# Autostart
+Xexec --no-startup-id fcitx5 -dr -s 5
+Xexec --no-startup-id feh --no-fehbg --bg-scale "${HOME}/BG.png"
+Xexec keepassxc
+X
+X# Appearance
+Xfont pango:Cascadia Mono 11
+Xdefault_border pixel 3
+Xsmart_borders on
+Xgaps inner 10
+Xsmart_gaps on
+X
+X# Features
+Xfocus_follows_mouse no
+X
+X# Bar
+Xbar {
+X	i3bar_command i3bar --transparency
+X	status_command ${HOME}/.config/i3/conky-i3.sh
+X	position top
+X	font pango:CaskaydiaCove Nerd Font 11
+X	separator_symbol " / "
+X	colors {
+X		background #000000d0
+X		focused_workspace #afafaf #afafaf #181c24
+X		inactive_workspace #181c24 #181c24 #afafaf
+X	}
+X}
+X
+X# Window rules
+Xfor_window [window_role="PictureInPicture"] sticky enable
+X
+X# Keybinding
+Xbindsym Mod4+Print exec --no-startup-id maim | tee ~/Pictures/Screenshot_$(date +%Y%m%d_%H%M%S).png | xclip -selection clipboard -t image/png
+Xbindsym Mod4+Shift+z exec --no-startup-id maim -s -u | tee ~/Pictures/Screenshot_$(date +%Y%m%d_%H%M%S).png | xclip -selection clipboard -t image/png
+X
+Xfloating_modifier $mod
+Xbindsym $mod+Return exec --no-startup-id i3-sensible-terminal
+Xbindsym $mod+Shift+q kill
+Xbindsym $mod+z exec $menu
+X
+Xbindsym $mod+Shift+c reload
+Xbindsym $mod+Shift+r restart
+X
+Xbindsym $mod+f fullscreen toggle
+Xbindsym $mod+space focus mode_toggle
+Xbindsym $mod+Shift+space floating toggle
+X
+Xbindsym $mod+$up focus up
+Xbindsym $mod+$left focus left
+Xbindsym $mod+$down focus down
+Xbindsym $mod+$right focus right
+X
+Xbindsym $mod+Up focus up
+Xbindsym $mod+Left focus left
+Xbindsym $mod+Down focus down
+Xbindsym $mod+Right focus right
+X
+Xbindsym $mod+Shift+$up move up
+Xbindsym $mod+Shift+$left move left
+Xbindsym $mod+Shift+$down move down
+Xbindsym $mod+Shift+$right move right
+X
+Xbindsym $mod+Shift+Up move up
+Xbindsym $mod+Shift+Left move left
+Xbindsym $mod+Shift+Down move down
+Xbindsym $mod+Shift+Right move right
+X
+Xbindsym $mod+q workspace prev
+Xbindsym $mod+e workspace next
+X
+Xbindsym $mod+1 workspace number 1
+Xbindsym $mod+2 workspace number 2
+Xbindsym $mod+3 workspace number 3
+Xbindsym $mod+4 workspace number 4
+Xbindsym $mod+5 workspace number 5
+Xbindsym $mod+6 workspace number 6
+Xbindsym $mod+7 workspace number 7
+Xbindsym $mod+8 workspace number 8
+Xbindsym $mod+9 workspace number 9
+Xbindsym $mod+0 workspace number 10
+X
+Xbindsym $mod+Shift+1 move container to workspace number 1
+Xbindsym $mod+Shift+2 move container to workspace number 2
+Xbindsym $mod+Shift+3 move container to workspace number 3
+Xbindsym $mod+Shift+4 move container to workspace number 4
+Xbindsym $mod+Shift+5 move container to workspace number 5
+Xbindsym $mod+Shift+6 move container to workspace number 6
+Xbindsym $mod+Shift+7 move container to workspace number 7
+Xbindsym $mod+Shift+8 move container to workspace number 8
+Xbindsym $mod+Shift+9 move container to workspace number 9
+Xbindsym $mod+Shift+0 move container to workspace number 10
+X
+Xbindsym $mod+minus scratchpad show
+Xbindsym $mod+Shift+minus move scratchpad
+X
+Xmode "resize" {
+X	bindsym $up resize shrink height 10 px or 10 ppt
+X	bindsym $left resize shrink width 10 px or 10 ppt
+X	bindsym $down resize grow height 10 px or 10 ppt
+X	bindsym $right resize grow width 10 px or 10 ppt
+X}
+Xbindsym $mod+p mode "resize"
+d849f48b29aa42cc93871e23de884f11
+echo x - /home/syobon/.config/i3/conky-i3.sh
+sed 's/^X//' >/home/syobon/.config/i3/conky-i3.sh << '1afbe9c65cd0fbb774aa85e5a15dc7f6'
+X#!/bin/sh
+XLANG=C
+Xecho '{"version":1}'
+Xecho '['
+Xecho '[],'
+Xexec conky -c ${HOME}/.config/i3/conky-i3.conf
+1afbe9c65cd0fbb774aa85e5a15dc7f6
+echo x - /home/syobon/.config/i3/conky-i3.conf
+sed 's/^X//' >/home/syobon/.config/i3/conky-i3.conf << '6c30749d7c85df90efa5c972ca345661'
+Xconky.config = {
+X	out_to_x = false,
+X	own_window = false,
+X	out_to_console = true,
+X	background = false,
+X	max_text_width = 0,
+X	update_interval = 1,
+X	total_run_times = 0,
+X	cpu_avg_samples = 2,
+X	use_spacer = "left",
+X	pad_percents = 3,
+X	times_in_seconds = true,
+X};
+X
+Xconky.text = [[
+X[
+X	{ "full_text": " ", "color": "\#ffffff" },
+X	{ "full_text": "󰍛 ${cpu}%", "color": "\#e06c75" },
+X	{ "full_text": " ${memperc}% (${swapperc}%)", "color": "\#d19a66" },
+X	{ "full_text": " ${if_match ${processes} < 10000} ${if_match ${processes} < 1000} ${if_match ${processes} < 100} ${if_match ${processes} < 10} ${endif}${endif}${endif}${endif}${processes}", "color": "\#98c379" },
+X	{ "full_text": " ${format_time ${uptime} " (\hhr )\m mins"}", "color": "\#61afef" },
+X	{ "full_text": "  ${time %Y/%m/%d (%a)}", "color": "\#c678dd" },
+X	{ "full_text": "${time %H:%M %S} ", "color": "\#c678dd" }
+X],
+X]];
+6c30749d7c85df90efa5c972ca345661
+echo x - /home/syobon/.config/picom/picom.conf
+sed 's/^X//' >/home/syobon/.config/picom/picom.conf << '3253daa30c1307074a3311e05df450e0'
+Xbackend = "glx";
+Xglx-no-stencil = true;
+Xglx-no-rebind-pixmap = true;
+Xuse-ewmh-active-win = true;
+Xvsync = true;
+X
+Xfading = true;
+Xinactive-opacity = 0.75;
+Xshadow = true;
+X
+Xopacity-rule = [
+X	"100:role = 'PictureInPicture'",
+X	"100:window_type = 'utility'",
+X	"90:class_g = 'Rofi'"
+X];
+X
+Xshadow-exclude = [
+X	"class_g = 'Conky'",
+X	"role = 'Popup'",
+X	"window_type = 'popup_menu'",
+X	"window_type = 'tooltip'"
+X];
+3253daa30c1307074a3311e05df450e0
+echo x - /home/syobon/.config/rofi/config.rasi
+sed 's/^X//' >/home/syobon/.config/rofi/config.rasi << '725c2e93e90865726d63203aa8602065'
+X@theme "/usr/local/share/rofi/themes/Arc-Dark.rasi"
+Xconfiguration {
+X	show-icons: true;
+X	modes: [drun,run];
+X	font: "CaskaydiaCove Nerd Font 12";
+X}
+725c2e93e90865726d63203aa8602065
+exit
+

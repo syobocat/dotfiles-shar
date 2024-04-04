@@ -1,0 +1,31 @@
+# This is a shell archive.  Save it in a file, remove anything before
+# this line, and then unpack it by entering "sh file".  Note, it may
+# create directories; files and directories will be owned by you and
+# have default permissions.
+#
+# This archive contains:
+#
+#	/home/syobon/.gnupg/gpg-agent.conf
+#	/home/syobon/.gnupg/sshcontrol
+#
+echo x - /home/syobon/.gnupg/gpg-agent.conf
+sed 's/^X//' >/home/syobon/.gnupg/gpg-agent.conf << 'fdc269371cec42e0502bf5ace818b598'
+Xenable-ssh-support
+fdc269371cec42e0502bf5ace818b598
+echo x - /home/syobon/.gnupg/sshcontrol
+sed 's/^X//' >/home/syobon/.gnupg/sshcontrol << '89b17700090fef1769cf0fa64807de61'
+X# List of allowed ssh keys.  Only keys present in this file are used
+X# in the SSH protocol.  The ssh-add tool may add new entries to this
+X# file to enable them; you may also add them manually.  Comment
+X# lines, like this one, as well as empty lines are ignored.  Lines do
+X# have a certain length limit but this is not serious limitation as
+X# the format of the entries is fixed and checked by gpg-agent. A
+X# non-comment line starts with optional white spaces, followed by the
+X# keygrip of the key given as 40 hex digits, optionally followed by a
+X# caching TTL in seconds, and another optional field for arbitrary
+X# flags.   Prepend the keygrip with an '!' mark to disable it.
+X
+X9AC4552355DA7F05AEEDBC1D8B51D5EBF7E7F396
+89b17700090fef1769cf0fa64807de61
+exit
+

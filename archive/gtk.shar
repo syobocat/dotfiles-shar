@@ -1,0 +1,23 @@
+# This is a shell archive.  Save it in a file, remove anything before
+# this line, and then unpack it by entering "sh file".  Note, it may
+# create directories; files and directories will be owned by you and
+# have default permissions.
+#
+# This archive contains:
+#
+#	/home/syobon/.gtkrc-2.0
+#	/home/syobon/.config/gtk-3.0/settings.ini
+#
+echo x - /home/syobon/.gtkrc-2.0
+sed 's/^X//' >/home/syobon/.gtkrc-2.0 << '38339453ca9b31caacdf337e71341438'
+Xgtk-theme-name="Qogir"
+Xgtk-icon-theme-name="Qogir"
+38339453ca9b31caacdf337e71341438
+echo x - /home/syobon/.config/gtk-3.0/settings.ini
+sed 's/^X//' >/home/syobon/.config/gtk-3.0/settings.ini << 'ec87100b5681292b3e6ccbe4bae475e2'
+X[Settings]
+Xgtk-theme-name=Qogir
+Xgtk-icon-theme-name=Qogir
+ec87100b5681292b3e6ccbe4bae475e2
+exit
+
